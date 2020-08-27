@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ItemView: View {
+struct ItemDetail: View {
     @EnvironmentObject var order: Order
     var item: MenuItem
     
@@ -36,12 +36,12 @@ struct ItemView: View {
     }
 }
 
-struct ItemView_Previews: PreviewProvider {
+struct ItemDetail_Previews: PreviewProvider {
     static let order = Order()
     
     static var previews: some View {
         NavigationView {
-            ItemView(item: MenuItem.example).environmentObject(order)
+            ItemDetail(item: MenuItem.example).environmentObject(order)
         }
     }
 }
